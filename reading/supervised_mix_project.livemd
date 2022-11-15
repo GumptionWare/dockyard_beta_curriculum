@@ -302,6 +302,7 @@ defmodule RockPaperScissors do
 
   def handle_info(:prompt, state) do
     choice = "Please enter rock, paper, or scissors." |> IO.gets() |> String.trim()
+
     answer = Enum.random(["rock", "paper", "scissors"])
 
     result =

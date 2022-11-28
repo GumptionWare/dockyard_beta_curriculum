@@ -80,6 +80,15 @@ Here's that data represented as a `Pokemon` struct.
 
 ## Get A Pokemon
 
+```elixir
+defmodule Pokemon do
+  @derive [Poison.Encoder]
+  defstruct [:id, :name, :hp, :attack, :defense, :special_attack, :special_defense, :spped, :height, :weight, :types[]]
+end
+response = HTTPoison.get!("https://pokeapi.co/api/v2/pokemon/charizard")
+# Poison.decode!(response.body)
+```
+
 We can request information about Pokemon using the [Pokemon API](https://pokeapi.co/).
 
 You can retrieve information with the following URL where `name` is the name of the pokemon.

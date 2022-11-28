@@ -28,7 +28,7 @@ Generally, API refers to web APIs, which are programs that run on the internet. 
 
 We won't go deep into networking or how the internet works, as that is beyond the scope of this course. However, Crash Course Computer Science provides an excellent overview.
 
-<!-- livebook:{"attrs":{"source":"YouTube.new(\"https://www.youtube.com/watch?v=AEaKrq3SpW8\")","title":"The Internet: Crash Course Computer Science"},"chunks":null,"kind":"Elixir.HiddenCell","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":{"source":"YouTube.new(\"https://www.youtube.com/watch?v=AEaKrq3SpW8\")","title":"The Internet: Crash Course Computer Science"},"kind":"Elixir.HiddenCell","livebook_object":"smart_cell"} -->
 
 ```elixir
 YouTube.new("https://www.youtube.com/watch?v=AEaKrq3SpW8")
@@ -164,6 +164,7 @@ Use [Poison.decode!/2](https://hexdocs.pm/poison/Poison.html#decode!/2) to decod
 
 ```elixir
 string = "{\"hello\"\: \"world\"}"
+Poison.decode!(string)
 ```
 
 ## HTTP POST
@@ -222,9 +223,9 @@ Create a free account on the [Open Weather API](https://openweathermap.org/) and
 Use your API key and valid latitude/longitude coordinates to make a successful request to their API. Ensure the `:status_code` is `200` rather than `401`.
 
 ```elixir
-lat = 35
-lon = 139
-api_key = ""
+lat = 47.603230
+lon = -122.330276
+api_key = "66f37e864df07d48faade2af2ff6cac7"
 
 {:ok, response} =
   HTTPoison.get(

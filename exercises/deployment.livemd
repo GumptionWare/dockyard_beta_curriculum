@@ -41,6 +41,24 @@ Create a module that will seed your production database with data. Open the IEx 
 
 <!-- livebook:{"break_markdown":true} -->
 
+### Bonus: CI Check
+
+Add the following steps to your CI process.
+
+Code formatting:
+
+```
+Run mix format --check-formatted
+```
+
+Check warnings as errors:
+
+```
+mix compile --warnings-as-errors
+```
+
+<!-- livebook:{"break_markdown":true} -->
+
 ### Bonus: Credo CI
 
 Add [Credo](../reading/credo.livemd) to your project and configure it with your continuous integration system.
@@ -71,3 +89,9 @@ Create a pull request to your forked `main` branch. Please do not create a pull 
 Notify your teacher by including `@BrooklinJazz` in your PR description to get feedback.
 
 If you are interested in joining the next academy cohort, [sign up here](https://academy.dockyard.com/) to receive more news when it is available.
+
+## Up Next
+
+| Previous                                                           | Next                                   |
+| ------------------------------------------------------------------ | -------------------------------------: |
+| [Book Search Deployment](../reading/book_search_deployment.livemd) | [LiveView](../reading/liveview.livemd) |
